@@ -1,4 +1,4 @@
-# Quantized Linformer for Jet Tagging
+# Quantised Linformer for Jet Tagging
 
 This repository implements a quantised Linformer neural network for high-energy physics jet classification using HGQ (Heterogeneous Graph Quantisation) and hls4ml.
 
@@ -30,8 +30,7 @@ pip install -r requirements.txt
 ## Setup
 
 1. **Data Preparation**
-   - Training data can be found 
-   - Download LHCjet 150p dataset into `archive/hls4ml_LHCjet_150p_train/`
+   - Download [LHCjet 150p dataset from Kaggle](https://www.kaggle.com/datasets/calad0i/hls4ml-lhc-jet-dataset-150-particles) into `archive/hls4ml_LHCjet_150p_train/`
    - Expected structure:
      ```
      archive/hls4ml_LHCjet_150p_train/
@@ -100,8 +99,8 @@ Running Intel HLS tools on Apple Silicon requires a dual-container workflow due 
 **See [Synthesis_On_ARM/](Synthesis_On_ARM/) for detailed setup:**
 - Dockerfile for Intel oneAPI container (x86_64 emulation via Rosetta 2)
 - Automation script to link ARM64 dev environment with x86_64 build container
-- Daily workflow for model training → C++ generation → synthesis 
-- this allows creation of report files for estimates latency and resource us
+- Daily workflow for model training → C++ generation → synthesis
+- Report generation for estimated latency and resource usage
 
 This approach allows you to develop on native ARM64 Python/TensorFlow while delegating compilation to an emulated Intel build server.
 
