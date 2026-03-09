@@ -2,6 +2,14 @@
 
 This repository implements a quantised Linformer neural network for high-energy physics jet classification using HGQ (Heterogeneous Graph Quantisation) and hls4ml.
 
+> **Based on:** This code is an adaptation of the research presented in:
+> 
+> **Sub-microsecond Transformers for Jet Tagging on FPGAs**  
+> Lauri Laatu, Chang Sun, Arianna Cox, Abhijith Gandrakota, Benedikt Maier, Jennifer Ngadiuba, Zhiqiang Que, Wayne Luk, Maria Spiropulu, Alexander Tapper  
+> arXiv:2510.24784
+> 
+> Implementation targets Intel oneAPI/HLS backends. See [Acknowledgements](#acknowledgements) for details.
+
 ## Overview
 
 The project trains a quantised attention-based model (`QLinformer`) to classify jets into five categories (gluon, quark, top, W boson, Z boson) with hardware efficiency constraints. The model targets ~200k EBOps (Binary Operations) for deployment on FPGA/ASIC backends.
@@ -93,7 +101,7 @@ Running Intel HLS tools on Apple Silicon requires a dual-container workflow due 
 - Dockerfile for Intel oneAPI container (x86_64 emulation via Rosetta 2)
 - Automation script to link ARM64 dev environment with x86_64 build container
 - Daily workflow for model training → C++ generation → synthesis 
-- this allows creation of report files for estimates latency and resource usage
+- this allows creation of report files for estimates latency and resource us
 
 This approach allows you to develop on native ARM64 Python/TensorFlow while delegating compilation to an emulated Intel build server.
 
@@ -103,10 +111,14 @@ This approach allows you to develop on native ARM64 Python/TensorFlow while dele
 - [hls4ml](http://hls4ml.ics.uci.edu/)
 - LHCjet dataset from high-energy physics benchmarks
 
+## Acknowledgements
 
+Special thanks to **Dr. Lauri Laatu** (Research Associate, Imperial College London) for his assistance in establishing this workflow. His expertise and custom HLS4ML fork were great in enabling Linformer support and getting this hardware synthesis pipeline operational on my ARM setup.
 
+## Author Notes
 
 - Large model files and data are excluded from git (see `.gitignore`)
+
 
 
 #
