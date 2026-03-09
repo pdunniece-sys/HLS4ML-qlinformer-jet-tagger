@@ -1,0 +1,71 @@
+# Large Data Files
+*.h5
+*.hdf5
+*.keras
+*.pkl
+*.pickle
+
+# Directories with generated/downloaded data
+archive/
+saved_models/
+hls_projects/
+reports*/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Generated artifacts
+*.png
+*.jpg
+*.jpeg
+linformer_architecture.png
+Linformer_ROC_Curve.png
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
